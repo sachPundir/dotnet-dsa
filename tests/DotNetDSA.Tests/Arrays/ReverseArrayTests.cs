@@ -4,30 +4,40 @@ namespace DotNetDSA.Tests.Arrays
 {
   public class ReverseArrayTests
   {
-    [Fact]
-    public void Execute_NormalArray_ReturnsReversed()
+    public static IEnumerable<object[]> ReverseMethods =>
+      new List<object[]>
+      {
+        new object[] { new Func<int[], int[]>(ReverseArray.ReverseInPlace) },
+        new object[] { new Func<int[], int[]>(ReverseArray.ReverseWithExtraSpace) }
+      };
+
+    [Theory]
+    [MemberData(nameof(ReverseMethods))]
+    public void Reverse_NormalArray_ReturnsReversed(Func<int[], int[]> reverseMethod)
     {
       int[] input = { 1, 2, 3, 4 };
 
-      var result = ReverseArray.Execute(input);
+      var result = reverseMethod(input);
 
       Assert.Equal(new[] { 4, 3, 2, 1 }, result);
     }
 
-    [Fact]
-    public void Execute_EmptyArray_ReturnsEmpty()
+    [Theory]
+    [MemberData(nameof(ReverseMethods))]
+    public void Reverse_EmptyArray_ReturnsEmpty(Func<int[], int[]> reverseMethod)
     {
-      var result = ReverseArray.Execute(Array.Empty<int>());
+      var result = reverseMethod(Array.Empty<int>());
 
       Assert.Empty(result);
     }
 
-    [Fact]
-    public void Execute_Null_ReturnsNull()
+    [Theory]
+    [MemberData(nameof(ReverseMethods))]
+    public void Reverse_Null_ReturnsNull(Func<int[], int[]> reverseMethod)
     {
       int[] input = null;
 
-      var result = ReverseArray.Execute(input);
+      var result = reverseMethod(input);
 
       Assert.Null(result);
     }
