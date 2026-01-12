@@ -1,183 +1,113 @@
-📘 DSA-With-CSharp
+# dotnet-dsa
 
-A complete Data Structures and Algorithms repository implemented in C#, designed for interview preparation, concept clarity, and clean coding practices.
+Data Structures and Algorithms implemented using **.NET (C#)** with a strong focus on
+**clarity, correctness, and interview readiness**.
 
-This repository covers fundamentals to advanced DSA topics, with a strong focus on readability, edge cases, and time–space complexity analysis.
+This repository is part of a long-term learning journey to build strong fundamentals
+in problem-solving, performance analysis, and clean coding using the .NET ecosystem.
 
-🎯 Goals
+---
 
-Build strong problem-solving skills
+## 🎯 Goals
 
-Prepare for technical interviews
+- Learn **Data Structures and Algorithms** using idiomatic C#
+- Understand **time and space complexity** deeply
+- Write **clean, readable, and testable code**
+- Avoid unnecessary abstractions and premature optimizations
+- Build an **interview-ready reference** for DSA in .NET
 
-Understand why an algorithm works, not just how
+---
 
-Practice clean, maintainable C# code
+## 📁 Repository Structure
 
-🧠 Topics Covered
-🔹 Basics
-
-Time & Space Complexity
-
-Math Basics
-
-Recursion
-
-🔹 Core Data Structures
-
-Arrays
-
-Strings
-
-Linked Lists (Singly, Doubly, Circular)
-
-Stack & Queue
-
-Hashing (Dictionary, HashSet)
-
-🔹 Trees & Graphs
-
-Binary Tree
-
-Binary Search Tree (BST)
-
-Tree Traversals
-
-Heaps (Min / Max)
-
-Graphs (BFS, DFS, Shortest Path, MST)
-
-🔹 Algorithms
-
-Searching (Binary Search, Variants)
-
-Sorting (Comparison & Non-Comparison)
-
-Greedy Algorithms
-
-Dynamic Programming
-
-Backtracking
-
-Bit Manipulation
-
-🔹 Advanced
-
-Trie
-
-Segment Tree
-
-Fenwick Tree (Binary Indexed Tree)
-
-📂 Repository Structure
-DSA-With-CSharp/
+```
+dotnet-dsa
 │
-├── 00_Basics/
-├── 01_Arrays/
-├── 02_Strings/
-├── 03_LinkedList/
-├── 04_Stack/
-├── 05_Queue/
-├── 06_Hashing/
-├── 07_Trees/
-├── 08_Heaps/
-├── 09_Graphs/
-├── 10_Greedy/
-├── 11_DynamicProgramming/
-├── 12_Backtracking/
-├── 13_BitManipulation/
-├── 14_Searching/
-├── 15_Sorting/
-├── 16_Advanced/
-└── Utils/
+├── DotNetDSA.sln
+├── NuGet.Config
+├── README.md
+│
+├── src
+│   └── DotNetDSA.Core
+│       ├── Arrays
+│       ├── Strings
+│       ├── Hashing
+│       ├── Sorting
+│       ├── TwoPointers
+│       ├── Common
+│       └── Program.cs
+│
+└── tests
+    └── DotNetDSA.Tests
+        ├── Arrays
+        ├── Strings
+        ├── Hashing
+        ├── Sorting
+        ├── TwoPointers
+        └── GlobalUsings.cs
+```
 
+---
 
-Each folder contains:
+## 🧠 Learning Philosophy
 
-Concept-wise implementations
+- **One problem per file**
+- **One responsibility per class**
+- No LINQ in early stages (explicit loops for clarity)
+- No design patterns unless they add real value
+- Code is written for **understanding first**, optimization later
 
-Common interview problems
+---
 
-Edge case handling
+## ✅ What Each Implementation Includes
 
-Time & space complexity analysis
+- Clear C# implementation
+- Explanation in comments
+- Time complexity analysis
+- Space complexity analysis
+- Unit tests covering:
+  - Normal cases
+  - Edge cases
+  - Boundary conditions
 
-🧪 Code Style & Structure
+---
 
-Each problem follows a consistent structure:
+## 🧪 Testing
 
-/*
-Problem:
-Brief problem statement.
+This project uses **xUnit** for testing.
 
-Approach:
-Explanation of the algorithm.
+Run all tests from the repository root:
 
-Edge Cases:
-Handled scenarios.
+```bash
+dotnet test
+```
 
-Time Complexity: O(...)
-Space Complexity: O(...)
-*/
+---
 
+## 🚧 Status
 
-✔ Clean code
-✔ Meaningful naming
-✔ No unnecessary dependencies
+This is an **active learning repository**.
 
-▶️ How to Run
-Prerequisites
+Topics are added incrementally in the following order:
 
-.NET SDK 6.0 or later
+1. Arrays
+2. Strings
+3. Hashing
+4. Sorting
+5. Two Pointers
+6. (More to be added)
 
-Run
-dotnet build
-dotnet run
+---
 
+## 📌 Notes
 
-(Individual classes can be tested via Main() or unit tests.)
+- This repository is intentionally kept simple and focused.
+- Advanced optimizations and abstractions may be added later
+  once fundamentals are solid.
+- The goal is **mastery**, not speed.
 
-🚀 Who Is This For?
+---
 
-Students learning DSA using C#
+## 📜 License
 
-Developers preparing for FAANG / product-based interviews
-
-Anyone wanting clean, structured DSA implementations
-
-🌱 Roadmap
-
- Add more interview problems
-
- Difficulty tags (Easy / Medium / Hard)
-
- Unit tests (xUnit)
-
- Visual explanations (diagrams)
-
- Performance comparisons
-
-🤝 Contributions
-
-Contributions, suggestions, and improvements are welcome.
-
-If you find an issue or want to add a new problem:
-
-Fork the repository
-
-Create a feature branch
-
-Submit a pull request
-
-⭐ Support
-
-If this repository helps you:
-
-⭐ Star the repo
-
-📌 Share it with others preparing for interviews
-
-👤 Author
-
-Sachin Kumar
-Designed & implemented with a focus on clarity, correctness, and performance.
+This project is open-source and available for learning and reference purposes.
