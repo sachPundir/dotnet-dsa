@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace DotNetDSA.Core;
+
+internal class Program
+{
+  private static void Main(string[] _)
+  {
+    Console.WriteLine("DotNet DSA Core Library");
+  }
+}
